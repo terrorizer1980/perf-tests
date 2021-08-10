@@ -7,7 +7,7 @@ ADD [".", "/go/src/$gopkg"]
 WORKDIR /go/src/$gopkg
 RUN CGO_ENABLED=0 go build -o /workspace/network ./cmd
 
-FROM  golang:1.15.2-alpine3.12
+FROM  golang:rc-alpine3.12
 ENV LD_LIBRARY_PATH=/usr/local/lib
 
 RUN apk update \
